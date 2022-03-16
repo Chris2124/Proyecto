@@ -92,9 +92,9 @@ while op != 0:
     elif op==3:
         región=(input("Ingrese una región (Costa/Sierra/Oriente): "))
         if región=="Costa":
-            print("Total Recaudado en la Región: ", (consumo_energia['Coca Codo Sinclair']['Guayaquil']['tarifa']) + (consumo_energia['Sopladora']['Guayaquil']['tarifa']))
+            print"Total Recaudado en la Región: $", (consumo_energia['Coca Codo Sinclair']['Guayaquil']['tarifa'] * sum(consumo_energia['Coca Codo Sinclair']['Guayaquil']['consumos'])) + (consumo_energia['Sopladora']['Guayaquil']['tarifa']* sum(consumo_energia['Sopladora']['Guayaquil']['consumos'])))
         elif región=="Sierra":
-            print("Total Recaudado en la Región: ", (consumo_energia['Coca Codo Sinclair']['Quito']['tarifa']) + (consumo_energia['Sopladora']['Quito']['tarifa'])+(consumo_energia['Sopladora']['Loja']['tarifa']))
+            print("Total Recaudado en la Región: $", (consumo_energia['Coca Codo Sinclair']['Quito']['tarifa']*sum(consumo_energia['Coca Codo Sinclair']['Quito']['consumos'])) + (consumo_energia['Sopladora']['Quito']['tarifa']*sum(consumo_energia['Sopladora']['Quito']['consumos']))+(consumo_energia['Sopladora']['Loja']['tarifa']*sum(consumo_energia['Sopladora']['Loja']['consumos'])))
         elif región=="Oriente":
             print("Ambas plantas no recaudan dinero en esta región")
         else:
